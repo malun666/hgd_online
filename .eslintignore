@@ -1,0 +1,9 @@
+/build/
+/config/
+/dist/
+/*.js
+/test/unit/coverage/
+/plugin/
+/src/template/
+/src/js/tmpl/*.js
+/src/asset/font/**/*.js

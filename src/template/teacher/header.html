@@ -1,0 +1,87 @@
+<!--S 头部模板 -->
+<div class="tmpl-header">
+  <!-- 左侧logo区域 -->
+  <div class="tmh-left">
+    <div class="logo">
+      <img src='../../asset/image/logo.png' alt="HITP">
+    </div>
+    <div class="name">
+      <img src='../../asset/image/logo2.png' alt="哈尔滨工业大学">
+    </div>
+  </div>
+  <!-- 中间搜索区域 -->
+
+  <div class="tmh-center">
+    <div class="tmh-select">
+      <input type="tmh-text">
+      <svg class="icon" aria-hidden="true">
+        <use xlink:href="#icon-ziyuan3"></use>
+      </svg>
+    </div>
+  </div>
+
+
+  <!-- 右侧用户区域 -->
+  <div class="tmh-right">
+    <!-- 消息 -->
+    <div class="tmh-message">
+      <a href="#">
+        <svg class="icon" aria-hidden="true">
+          <use xlink:href="#icon-ziyuan2"></use>
+        </svg>
+        <span>{{message}}</span>
+      </a>
+    </div>
+    <!-- 用户信息 -->
+    <div class="tmh-user">
+      <img src={{ '../../asset/image/'+icon}} alt="头像">
+      <div class="user">
+        <div class="show">
+          {{user}}
+          <svg class="icon" aria-hidden="true">
+            <use xlink:href="#icon-ziyuan1"></use>
+          </svg>
+        </div>
+        <div class="hid">
+          <ul>
+            <li>
+              <a href="#">我的资源</a>
+            </li>
+            <li>
+              <a href="#">我的订单</a>
+            </li>
+            <li>
+              <a href="#">个人资料</a>
+            </li>
+            <li>
+              <a href="#">退出登录</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <!-- 客户端 -->
+
+      <div class="SwitchMe user">
+        <div class="show">
+          {{type+'端'}}
+          <svg class="icon" aria-hidden="true">
+            <use xlink:href="#icon-ziyuan1"></use>
+          </svg>
+        </div>
+        <div class="hid">
+          <ul>
+            <li>
+              <a href="#">教师端</a>
+            </li>
+            <li>
+              <a href="#">学生端</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</div>
+<!--e 头部模板 -->

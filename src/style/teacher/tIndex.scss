@@ -1,0 +1,64 @@
+.teIndexContent{
+    width: 1485px;
+    margin:0px auto;
+    margin-top:35px;
+    .teIndexContainer{
+        width: 1150px;
+        margin:0px auto;
+        .teIndextop{
+            overflow: hidden;       
+            .teIndexLeft{
+                float: left;
+                i{
+                    display:inline-block;
+                    width: 6px;
+                    height: 20px;
+                    background-color: #2DB0F9;
+                    vertical-align:middle
+                }
+                span{
+                    font-size: 21px;
+                    line-height: 0px;
+                    vertical-align:middle
+                }
+            }
+            .teIndexRight{
+                float: right;
+                a{
+                    color: #3598DB;
+                    background-color: #f9D3D4;
+                    font-size: 14px;
+                }
+             
+            }
+        }
+        .teIndexLi{
+            overflow: hidden;
+            margin-top:30px;
+            li{
+                float: left;
+                margin:0px 15px;
+                width: 200px;
+                height: 260px;
+                span{
+                   font-size: 14px;
+                   line-height: 24px;
+                }
+            }
+        }
+    }
+}
+//
+header{
+    height: 94px;
+}
+#banner{
+    width: 100%;
+    height: 392px;
+    
+}
+nav{
+    width: 100%;
+    height: 58px;
+    
+}

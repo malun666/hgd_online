@@ -1,0 +1,25 @@
+<div class="tTemNav">
+    <p></p>
+    <div class="conationer">
+        <div class="nav-left">
+            <ul>
+                {{each nav.left as value i}}
+                <li>
+                    <a href={{value.url}}>{{value.name}}</a>
+                </li>
+                {{/each}}
+
+            </ul>
+        </div>
+        <div class="nav-right">
+            <ul>
+                {{each nav.right as value i}}
+                <li>
+                    <a href={{value.url}}>{{value.name}}</a>
+                </li>
+                {{/each}}
+            </ul>
+        </div>
+    </div>
+    <p class="nav-bg"></p>
+</div>
