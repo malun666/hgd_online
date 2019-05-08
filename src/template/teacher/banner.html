@@ -1,0 +1,12 @@
+<div class="swiper-container">
+    <div class="swiper-wrapper">
+        {{each banner as value i}}
+        <div class="swiper-slide">
+            <a href="#">
+                <img src={{ '../../asset/image/'+value.imgUrl}} alt={{value.imgTitle}}>
+            </a>
+        </div>
+        {{/each}}
+    </div>
+    <div class="swiper-pagination"></div>
+</div>
