@@ -1,0 +1,21 @@
+.swiper-container{
+    background-color: #61caff;
+    .swiper-wrapper{
+        width: 1200px;
+        margin:0px auto;
+        height:392px;
+    }
+    .swiper-pagination{
+        .swiper-pagination-bullet {
+            width: 10px;
+            height: 10px;
+            background-color: #fff;
+            opacity: 1;
+            margin:0px 7px;
+        }
+        .swiper-pagination-bullet-active{
+            background-color: #3598DB;
+        }
+    }
+    
+}
