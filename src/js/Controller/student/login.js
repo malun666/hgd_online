@@ -1,10 +1,14 @@
 require.config({
   paths: {
-    'jquery': '../../../lib/jquery.min-1.11.3'
+    'jquery': '../../../lib/jquery.min-1.11.3',
+    'cookie': '../../../lib/js.cookie',
+    'sha1': '../../../lib/sha1',
+    'util': '../../../js/Tools/Util',
+    'ajaxSetup': '../../../js/Controller/student/ajaxSetup'
   }
 });
 
-require(['jquery'], function($) {
+require(['jquery', 'util', 'cookie', 'sha1'], function($, util, cookie, sha1) {
   var login = {
     init: function() {
       login.bindEvent();
@@ -40,7 +44,16 @@ require(['jquery'], function($) {
       }
       // 表单验证通过
       var data = $('#loginForm').serializeArray();
-      console.log(data);
+      data[1].value = b64_sha1(data[1].value); // 密码加密
+      // console.log(data);
+      util.ajax({
+        type: 'post',
+        url: 'http://n.hamkd.com/api/userlogin',
+        data: data,
+        success: function(response) {
+
+        }
+      });
     }
   };
   $(login.init);
