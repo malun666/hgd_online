@@ -8,7 +8,7 @@ require.config({
   }
 });
 
-require(['jquery', 'util', 'cookie', 'sha1'], function($, util, cookie, sha1) {
+require(['jquery', 'util', 'cookie', 'sha1'], function($, util, Cookies, sha1) {
   var login = {
     init: function() {
       login.bindEvent();
@@ -51,7 +51,21 @@ require(['jquery', 'util', 'cookie', 'sha1'], function($, util, cookie, sha1) {
         url: '/api/userlogin',
         data: data,
         success: function(response) {
-
+          if (response.code === 1) { // 登陆成功
+            Cookies.set('Authorization', response.token);
+            Cookies.set('userId', response.user.id);
+            // 判读是否是老师登陆
+            if (response.user.isTeacher) {
+              window.location.href = '/view/teacher/';
+            } else {
+              window.location.href = '/view/student/';
+            }
+          } else {
+            if ($('#loginForm').find('span').length > 0) {
+              $('#loginForm').find('span').remove();
+            }
+            $('#subBtn').after('<span style="color:red;display:block;font-size:12px;">用户名或密码不正确!</span>');
+          }
         }
       });
     }
