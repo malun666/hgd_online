@@ -1,0 +1,77 @@
+html,
+body {
+  background: #569cbd;
+}
+
+.logo-wrap {
+  width: 500px;
+  padding: 20px;
+  height: 400px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  background: #fff;
+  margin: -250px 0 0 -200px;
+  border-radius: 8px;
+
+  .logo {
+    display: block;
+    padding: 58px 0 0;
+    margin: 0 auto;
+    width: 470px;
+    height: 80px;
+  }
+
+  .formlog {
+    width: 470px;
+    margin: 30px auto 0;
+
+    .input-box {
+      height: 27px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+
+      label {
+        width: 32px;
+        height: 27px;
+        line-height: 27px;
+        text-align: center;
+        float: left;
+        background: #ddd;
+        border-radius: 4px 0 0 4px;
+      }
+
+      .txt {
+        float: left;
+        width: 436px;
+        height: 27px;
+        border-radius: 4px;
+        line-height: 27px;
+        text-indent: 18px;
+      }
+
+      .error {
+        color: red;
+        font-size: 12px;
+      }
+    }
+  }
+
+  .log-opt,
+  .log-btn {
+    text-align: center;
+    padding: 10px 0 0;
+  }
+
+  .log-btn {
+    .subBtn {
+      margin-top: 10px;
+      width: 60px;
+      height: 35px;
+      border-radius: 4px;
+      background: #569cbd;
+      color: #fff;
+    }
+  }
+
+}
