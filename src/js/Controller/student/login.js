@@ -44,11 +44,11 @@ require(['jquery', 'util', 'cookie', 'sha1'], function($, util, cookie, sha1) {
       }
       // 表单验证通过
       var data = $('#loginForm').serializeArray();
-      data[1].value = b64_sha1(data[1].value); // 密码加密
+      // data[1].value = b64_sha1(data[1].value); // 密码加密
       // console.log(data);
       util.ajax({
         type: 'post',
-        url: 'http://n.hamkd.com/api/userlogin',
+        url: '/api/userlogin',
         data: data,
         success: function(response) {
 
