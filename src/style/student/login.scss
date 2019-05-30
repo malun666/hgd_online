@@ -49,6 +49,11 @@ body {
         line-height: 27px;
         text-indent: 18px;
       }
+
+      .error {
+        color: red;
+        font-size: 12px;
+      }
     }
   }
 
@@ -68,4 +73,5 @@ body {
       color: #fff;
     }
   }
+
 }
