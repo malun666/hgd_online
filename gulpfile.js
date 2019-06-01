@@ -268,7 +268,7 @@ gulp.task('devServer', function () {
 gulp.task('open', ['devServer'], function () {
   gulp.src(__filename).pipe(
     open({
-      uri: 'http://localhost:38900/index.html'
+      uri: 'http://localhost:38900/login.html'
     })
   );
 });
