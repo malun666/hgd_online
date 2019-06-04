@@ -1,0 +1,52 @@
+.l_container{
+  position: absolute;
+	top: 30%;
+  left: 50%;
+  border: 1px solid skyblue;
+  width: 380px;
+  height: 300px;
+  transform: translate(-50%,-50%);
+  padding: 20px;
+  box-sizing: border-box;
+  box-shadow: 0 0 4px skyblue;
+  div.img{
+    text-align: center;
+    width: 100%;
+    padding: 10px;
+
+  }
+  form{
+    input{
+      display: block;
+      text-indent: .5em;
+      width: 300px;
+      margin: 10px auto;
+      height: 30px;
+      border: none;
+      border-bottom: 1px solid skyblue;
+    }
+    a.checknum{
+      position: absolute;
+      top: 180px;
+      right: 50px;
+
+    }
+    div{
+      width: 100%;
+      text-align: center;
+      a{
+        display: inline-block;
+        width: 50px;
+        height: 30px;
+        line-height: 30px;
+        margin: 10px;
+        border: 1px solid skyblue;
+        cursor: pointer;
+        background: skyblue;
+      }
+    }
+
+  }
+}
+
+

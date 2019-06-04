@@ -1,0 +1,44 @@
+/*
+ * 通用样式
+ */
+ body {
+	color: #666;
+	font-size: 12px;
+	font-family: tahoma, arial, "Hiragino Sans GB", "微软雅黑", simsun, sans-serif;
+}
+a {
+  color: #666;
+  text-decoration: none;
+}
+ul {
+  list-style: none;
+}
+.left {
+	float: left;
+}
+.right {
+	float: right;
+}
+.triangle-down {
+	border: 5px solid #666;
+	border-style: solid dashed dashed;
+	border-color: rgb(231, 89, 77) transparent transparent;
+}
+.triangle-down-black {
+	border: 5px solid #666;
+	border-style: solid dashed dashed;
+	border-color: #666666 transparent transparent;
+}
+.clearfix:before, .clearfix:after {
+	content: "";
+	display: table;
+}
+.clearfix:after {
+	clear: both;
+	height: 0;
+	line-height: 0;
+	visibility: hidden;
+}
+
+
+
