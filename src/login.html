@@ -1,41 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>哈尔滨工业大学出版社</title>
-  <link rel="stylesheet" href="//at.alicdn.com/t/font_1213266_zzjmnvp5bvk.css">
-  <link rel="stylesheet" href="./style/main.css">
+  <link rel="stylesheet" href="../../style/main.css">
+  <title>登录/注册</title>
 </head>
-
 <body>
-  <form id="loginForm">
-    <div class="logo-wrap">
-      <img class="logo" src="./asset/image/logo.png" alt="">
-      <div class="formlog">
-        <div class="input-box">
-          <label for="username" class=""><i class="iconfont icon-denglu"></i></label>
-          <input type="text" name="username" id="username" class="txt">
-        </div>
-      </div>
-      <div class="formlog">
-        <div class="input-box">
-          <label for="password" class=""><i class="iconfont icon-denglumima-baise"></i></label>
-          <input type="password" name="password" id="password" class="txt" value="aicoder.com">
-        </div>
-      </div>
-      <div class="log-opt">
-        <input type="checkbox" name="checkbox" id="teacherIdentity"> 教师身份
-        <input type="checkbox" name="checkbox" id="rememberPsd"> 记住密码
-      </div>
-      <div class="log-btn">
-        <input type="button" class="subBtn" value="登陆" id="subBtn">
-      </div>
+  <div class="l_container">
+    <div class="img">
+        <img src="./asset/image/logo.png" alt="">
     </div>
-  </form>
-  <script src="./lib/require.js" data-main="./js/Controller/student/login"></script>
+    <form action="" id="login">
+      <input type="text" placeholder='请输入姓名' id="user" name="username">
+      <input type="password" placeholder='请输入密码' id="pwd" name="password">
+      <input type="text" placeholder='验证码' id="valid"><a href="" class="checknum"><img src="http://n.hamkd.com/api/code" alt="Breaking Borders Logo" height="45" width="78"></a>
+      <div> <a  id="submitBtn">登录</a><a href="http://localhost:38900/index.html">取消</a></div>
+      <!-- http://localhost:38900/view/student/s_home.html -->
+    </form>
+  </div>
+  <script src="./lib/require.js" data-main="./js/Controller/student/s_login.js"></script>
 </body>
-
 </html>

@@ -1,0 +1,204 @@
+#s_c_content{
+  overflow: hidden;
+  width: 1190px;
+  margin: 0 auto;
+  margin-bottom: 60px;
+  p.s_top_p{
+    height: 55px;
+    line-height: 55px;
+    // border: 1px solid red;
+    padding-left: 10px;
+    span.s_span{
+      font-size: 14px;
+      margin: 0 5px;
+    }
+    a{
+      color: #3598db;
+      margin: 0 5px;
+      font-size: 14px;
+    }
+    span{
+      color: #3598db;
+    }
+  }
+  .s-c-wrap{
+    width: 100%;
+    .s-c-item{
+      width: 240px;
+      height: 200px;
+      float: left;
+      .accordion{
+        li{
+          position: relative;
+          margin-bottom: 5px;
+          .accordion-control{
+            width: 100%;
+            height:40px;
+            line-height: 40px;
+            text-align:left;
+            padding-left: 40px;
+            background: #f9f9f9;
+            cursor: pointer;
+            border: 1px solid rgb(206, 204, 204);
+          }
+          span{
+            position: absolute;
+            width: 12px;
+            height: 12px;
+            line-height: 10px;
+            text-align: center;
+            background: #3598db;
+            border-radius: 3px;
+            color: white;
+            top: 15px;
+            left: 15px;
+
+          }
+          .accordion-panel{
+            display: none;
+            margin-bottom: 5px;
+            li{
+              width: 100%;
+              height: 40px;
+              line-height: 40px;
+              border: 1px solid rgb(206, 204, 204);
+              text-align:left;
+              padding-left: 40px;
+              box-sizing: border-box;
+              margin-top: -1px;
+              margin-bottom: 0;
+              cursor: pointer;
+            }
+            li:hover{
+              background: #2db0f9;
+            }
+
+          }
+        }
+      }
+    }
+    .s-c-content{
+      width: 940px;
+      overflow: hidden;
+      box-sizing: border-box;
+      border: 1px solid #c9c9c9;
+      float: right;
+      .content_top{
+        height: 56px;
+        line-height: 56px;
+        padding: 0 20px;
+        border-bottom: 1px solid #c9c9c9;
+        .top_left{
+          span.top_span{
+            color: #2db0f9;
+          }
+
+        }
+        .top_right{
+          span.spanone{
+            background: #c9c9c9;
+            width: 12px;
+            height: 12px;
+            padding: 0 3px;
+            margin: 0 5px;
+            color: #fff;
+          }
+          span.top_span{
+            width: 12px;
+            height: 12px;
+            margin: 0 5px;
+            padding: 0 2px;
+            background: #2db0f9;
+            color: #fff;
+            cursor: pointer;
+          }
+          span{
+            i{
+              color: #2db0f9;
+            }
+          }
+
+        }
+      }
+      .content_main{
+        box-sizing: border-box;
+        ul{
+          display: flex;
+          flex-wrap: wrap;
+          li{
+            box-sizing: border-box;
+            padding: 20px;
+            width: 25%;
+            height: 252px;
+            margin-bottom: 20px;
+            box-sizing: border-box;
+            a{
+              display: block;
+              overflow: hidden;
+              // border: 1px solid green;
+              img{
+                width: 100%;
+                height: 185px;
+                box-sizing: border-box;
+                border: 1px solid #c9c9c9;
+
+              }
+              p{
+                height: 20px;
+                font-size: 16px;
+                line-height: 20px;
+                margin: 5px 0;
+                color: #333;
+              }
+            }
+            span{
+              margin-right: 10px;
+              font-size: 14px;
+              color: gray;
+            }
+
+          }
+        }
+      }
+      .content_footer{
+        height: 80px;
+        line-height: 80px;
+        padding: 0 20px;
+        border-top: 1px solid #c9c9c9;
+      }
+    }
+  }
+}
+
+#s_header{
+  .s-h-info{
+    .wrap{
+      .avater{
+        width: 42px;
+      	height: 42px;
+	      border-radius: 50%;
+
+      }
+    }
+    .wrap{
+      .mes{
+        display: inline-block;
+	      width: 42px;
+        height: 42px;
+        //需要换张信息图片
+	      background:  url(../../asset/image/4.png) no-repeat;
+        position: relative;
+        .mes-num{
+          font-size: 14px;
+          color: #fff;
+          position: absolute;
+          font-weight: 300;
+          top: -10px;
+          left: 22px;
+        }
+      }
+    }
+  }
+}
+
+
