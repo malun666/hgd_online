@@ -7,7 +7,6 @@ require.config({
 require(['jquery'], function($) {
   $(function() {
     var aList = $('.xiong');
-    console.log(aList);
     aList.click(function(event) {
       // event.preventDefault();
       for (var i = 0; i < aList.length; i++) {
@@ -15,6 +14,5 @@ require(['jquery'], function($) {
       }
       event.target.className = 'xiong color';
     });
-    console.log('xiongwencheng is sb');
   });
 });
