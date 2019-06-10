@@ -278,12 +278,13 @@
 }
 #s_textbook{
   width: 1190px;
-  height: 580px;
-  margin: 0 auto;
+  height: 600px;
+  margin: 18px auto;
   // border: 1px solid red;
   .s-t-top{
     height: 96px;
     line-height: 96px;
+    overflow: hidden;
     .top-left{
       font-size: 20px;
       font-weight: bold;
