@@ -1,0 +1,41 @@
+.c_detail{
+  width: 1190px;
+  margin: 0 auto;
+
+  border: 1px solid #a9a9a9;
+  p{
+    height: 52px;
+    line-height: 52px;
+    padding: 0 20px;
+  }
+  .detail_top{
+    height: 380px;
+    width: 100%;
+    padding: 20px;
+    border: 1px solid #a9a9a9;
+    box-sizing: border-box;
+    margin-bottom: 5px;
+    background: green;
+  }
+  .c_detail_main{
+    width: 1190px;
+    height: 938px;
+    // border: 1px solid #a9a9a9;
+    overflow: hidden;
+    .main_article{
+      width: 938px;
+      height:250px;
+      box-sizing: border-box;
+      padding: 30px;
+      background: skyblue;
+    }
+    .main_aside{
+      width:240px;
+      height: 250px;
+      overflow: hidden;
+      padding-left: 5px;
+      background: gray;
+    }
+
+  }
+}

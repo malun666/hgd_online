@@ -1,0 +1,11 @@
+<ul class="accordion">
+    {{each courseCat as value key}}
+    <li>
+      <button class="accordion-control">{{value.name}}</button><span>+</span>
+      <ul class="accordion-panel">
+        <li>中国哲学</li>
+        <li class="notone">西方哲学</li>
+      </ul>
+    </li>
+    {{/each}}
+</ul>
