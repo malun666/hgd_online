@@ -175,6 +175,21 @@
     if (typeof define === 'function') {define(function() {return template;});} else if (typeof exports !== 'undefined') {module.exports = template;} else {this.template = template;}
     
     /*v:1*/
+template('CatCourseList',function($data,$filename
+) {
+'use strict';var $utils=this,$helpers=$utils.$helpers,$each=$utils.$each,catCourseList=$data.catCourseList,value=$data.value,key=$data.key,$escape=$utils.$escape,$out='';$out+='<ul>\n  ';
+$each(catCourseList,function(value,key){
+$out+='\n  <li>\n    <a href="/view/student/s_course_detail.html">\n      <img src=';
+$out+=$escape(value.img);
+$out+=' alt="">\n      <p>课程名称</p>\n    </a>\n    <span>';
+$out+=$escape(value.author);
+$out+='</span><span>';
+$out+=$escape(value.college);
+$out+='</span>\n  </li>\n  ';
+});
+$out+='\n</ul>\n';
+return new String($out);
+});/*v:1*/
 template('CourseCat',function($data,$filename
 ) {
 'use strict';var $utils=this,$helpers=$utils.$helpers,$each=$utils.$each,courseCat=$data.courseCat,value=$data.value,key=$data.key,$escape=$utils.$escape,$out='';$out+='<ul class="accordion">\n    ';
