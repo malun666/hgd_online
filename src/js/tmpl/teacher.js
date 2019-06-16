@@ -175,6 +175,54 @@
     if (typeof define === 'function') {define(function() {return template;});} else if (typeof exports !== 'undefined') {module.exports = template;} else {this.template = template;}
     
     /*v:1*/
-template('index','');
+template('Carousel',function($data,$filename
+/*``*/) {
+'use strict';var $utils=this,$helpers=$utils.$helpers,$each=$utils.$each,list=$data.list,value=$data.value,i=$data.i,$escape=$utils.$escape,$out='';$each(list,function(value,i){
+$out+='\r\n<div class="swiper-slide"><img src="';
+$out+=$escape(value.imgUrl);
+$out+='" alt="';
+$out+=$escape(value.title);
+$out+='" style="width: 1348px; height: 410px;">\r\n</div>\r\n';
+});
+$out+='\r\n';
+return new String($out);
+});/*v:1*/
+template('Header',function($data,$filename
+/*``*/) {
+'use strict';var $utils=this,$helpers=$utils.$helpers,$escape=$utils.$escape,name=$data.name,$out='';$out+='<h1 class="s-h-logo left">\r\n  <a href="#"><img src="../../asset/image/logo.png" alt="logo" title="哈工大出版社在线教育" /></a>\r\n</h1>\r\n<div class="s-h-info right">\r\n  <ul class="user-list">\r\n    <li class="wrap">\r\n      <a href="" class="mes">\r\n        <span class="mes-num">1</span>\r\n      </a>\r\n    </li>\r\n    <li class="wrap">\r\n      <a href="" class="avater">\r\n        <img src="../../asset/image/avater.jpeg" class="avater" alt="" title="">\r\n      </a>\r\n      <a href="#">';
+$out+=$escape(name);
+$out+='<i class="triangle-down icon"></i></a>\r\n      <ul>\r\n        <li>我的资源</li>\r\n        <li class="giveout">我的订单</li>\r\n        <li class="giveout">个人资料</li>\r\n        <li class="giveout"><a href="http://localhost:38900/login.html">退出登录</a></li>\r\n      </ul>\r\n    </li>\r\n    <li class="wrap">\r\n      <a href="#">教师端<i class="triangle-down icon"></i></a>\r\n      <ul>\r\n        <li>学生端</li>\r\n        <li class="giveout">教师端</li>\r\n      </ul>\r\n    </li>\r\n  </ul>\r\n</div>\r\n<div class="s-h-search">\r\n  <div class="s-select">\r\n    <a href="#">课程<i class="triangle-down-black icon"></i></a>\r\n    <ul>\r\n      <li>课程</li>\r\n      <li class="giveout">教材</li>\r\n    </ul>\r\n  </div>\r\n  <div class="s-input">\r\n    <input type="search"><span class="search-logo"></span>\r\n  </div>\r\n</div>\r\n';
+return new String($out);
+});/*v:1*/
+template('RecommentedBook',function($data,$filename
+/*``*/) {
+'use strict';var $utils=this,$helpers=$utils.$helpers,$each=$utils.$each,list=$data.list,value=$data.value,i=$data.i,$escape=$utils.$escape,$out='';$out+=' <ul>\r\n   ';
+$each(list,function(value,i){
+$out+='\r\n   <li>\r\n     <img src="';
+$out+=$escape(value.imgUrl);
+$out+='" alt="';
+$out+=$escape(value.title);
+$out+='">\r\n     <p>';
+$out+=$escape(value.title);
+$out+='</p>\r\n   </li>\r\n   ';
+});
+$out+='\r\n </ul>\r\n';
+return new String($out);
+});/*v:1*/
+template('RecommentedCourse',function($data,$filename
+/*``*/) {
+'use strict';var $utils=this,$helpers=$utils.$helpers,$each=$utils.$each,list=$data.list,value=$data.value,i=$data.i,$escape=$utils.$escape,$out='';$out+='<ul>\r\n  ';
+$each(list,function(value,i){
+$out+='\r\n  <li>\r\n    <img src="';
+$out+=$escape(value.img);
+$out+='" alt="';
+$out+=$escape(value.title);
+$out+='">\r\n    <p>';
+$out+=$escape(value.title);
+$out+='</p>\r\n  </li>\r\n  ';
+});
+$out+='\r\n</ul>\r\n';
+return new String($out);
+});
 
 }()
