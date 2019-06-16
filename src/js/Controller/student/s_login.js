@@ -1,4 +1,4 @@
-//配置依赖的模块的路径
+// 配置依赖的模块的路径
 require.config({
   paths: {
     jquery: '/lib/jquery.min-1.11.3',
@@ -8,10 +8,10 @@ require.config({
 
   }
 });
-//进行入口处理
+// 进行入口处理
 require(['jquery', 'cookie', 'sha1'], function($, Cookies, sha1) {
   $(function() {
-    //未写表单验证
+    // 未写表单验证
     $('#submitBtn').on('click', function(e) {
       e.preventDefault();
       var dataArr = [];
@@ -31,7 +31,7 @@ require(['jquery', 'cookie', 'sha1'], function($, Cookies, sha1) {
           if (response.user.isTeacher === true) {
             Cookies.set('Authorization', dataArr[1]);
             Cookies.set('userID', response.user.id);
-            window.location.href = '/view/student/t_index.html';
+            window.location.href = '/view/teacher/t_index.html';
           } else {
             Cookies.set('Authorization', dataArr[1]);
             Cookies.set('userID', response.user.id);
