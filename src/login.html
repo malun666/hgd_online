@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,19 +8,22 @@
   <link rel="stylesheet" href="../../style/main.css">
   <title>登录/注册</title>
 </head>
+
 <body>
   <div class="l_container">
     <div class="img">
-        <img src="./asset/image/logo.png" alt="">
+      <img src="./asset/image/logo.png" alt="">
     </div>
     <form action="" id="login">
       <input type="text" placeholder='请输入姓名' id="user" name="username">
-      <input type="password" placeholder='请输入密码' id="pwd" name="password">
-      <input type="text" placeholder='验证码' id="valid"><a href="" class="checknum"><img src="http://n.hamkd.com/api/code" alt="Breaking Borders Logo" height="45" width="78"></a>
-      <div> <a  id="submitBtn">登录</a><a href="http://localhost:38900/index.html">取消</a></div>
+      <input type="password" placeholder='请输入密码' id="pwd" name="password" value="aicoder.com">
+      <input type="text" placeholder='验证码' id="valid"><a href="" class="checknum"><img src="http://n.hamkd.com/api/code"
+          alt="Breaking Borders Logo" height="45" width="78"></a>
+      <div> <a id="submitBtn">登录</a><a href="http://localhost:38900/index.html">取消</a></div>
       <!-- http://localhost:38900/view/student/s_home.html -->
     </form>
   </div>
   <script src="./lib/require.js" data-main="./js/Controller/student/s_login.js"></script>
 </body>
+
 </html>
