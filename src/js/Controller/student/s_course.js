@@ -5,6 +5,7 @@ require.config({
     cookies: '../../../lib/js.cookie',
     common: '../student/s_common',
     pagination: '../../../lib/jquery.simplePagination'
+
   },
   shim: {
     pagination: {
@@ -43,7 +44,19 @@ require(['jquery', 'tpl', 'cookies', 'common', 'pagination'], function($, tpl, C
       dataType: 'json',
       success: function(response) {
         console.log('courseCat', response);
-        courseCat = response;
+        for (var i = 0; i < response.length; i++) {
+          response[i].children = [];
+          for (var j = 0; j < response.length; j++) {
+            if (response[j].pid === response[i].id) {
+              response[i].children.push(response[j]);
+            }
+          }
+          if (response[i].children.length > 0) {
+            courseCat.push(response[i]);
+          }
+        };
+
+        console.log(courseCat);
         $('.s-c-item').html(tpl('CourseCat', {courseCat: courseCat}));
 
         $('.accordion').on('click', '.accordion-control', function(e) {
@@ -60,9 +73,34 @@ require(['jquery', 'tpl', 'cookies', 'common', 'pagination'], function($, tpl, C
       }
     });
 
+    $.ajax({
+      url: 'http://n.hamkd.com/api/student/course_category?pid=1',
+      type: 'GET',
+      data: '',
+      dataType: 'json',
+      success: function(response) {
+        console.log('test', response);
+      },
+      error: function() {
+        console.log('获取失败');
+      }
+    });
+    // $.ajax({
+    //   url: 'http://n.hamkd.com/api/student/courses?catId=6&_limit=20&_order=id',
+    //   type: 'GET',
+    //   data: '',
+    //   dataType: 'json',
+    //   success: function(response) {
+    //     console.log('test2', response);
+    //   },
+    //   error: function() {
+    //     console.log('获取失败');
+    //   }
+    // });
+
     var catCourseList = [];
     $.ajax({
-      url: 'http://n.hamkd.com/api/student/courses?_limit=20&_order=id&isHot=true',
+      url: 'http://n.hamkd.com/api/student/courses?catId=6&_limit=20&_order=id',
       type: 'GET',
       data: '',
       dataType: 'json'
@@ -81,7 +119,5 @@ require(['jquery', 'tpl', 'cookies', 'common', 'pagination'], function($, tpl, C
       prevText: '上一页',
       nextText: '下一页'
     });
-
-
   });
 });

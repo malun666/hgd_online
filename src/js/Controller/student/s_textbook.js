@@ -32,7 +32,7 @@ require(['jquery', 'tpl', 'cookies', 'common'], function($, tpl, Cookies, common
 
     var courseCat = [];
     $.ajax({
-      url: 'http://n.hamkd.com/api/student/course_category',
+      url: 'http://n.hamkd.com/api/student/course_category?pid=0',
       type: 'GET',
       data: '',
       dataType: 'json',
@@ -54,6 +54,9 @@ require(['jquery', 'tpl', 'cookies', 'common'], function($, tpl, Cookies, common
         console.log('获取失败');
       }
     });
+
+
+
   //   $.ajax({
   //     url: 'http://n.hamkd.com/api/student/courses?_limit=20&_order=id&isHot=true',
   //     type: 'GET',

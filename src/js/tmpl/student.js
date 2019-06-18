@@ -192,11 +192,17 @@ return new String($out);
 });/*v:1*/
 template('CourseCat',function($data,$filename
 ) {
-'use strict';var $utils=this,$helpers=$utils.$helpers,$each=$utils.$each,courseCat=$data.courseCat,value=$data.value,key=$data.key,$escape=$utils.$escape,$out='';$out+='<ul class="accordion">\n    ';
+'use strict';var $utils=this,$helpers=$utils.$helpers,$each=$utils.$each,courseCat=$data.courseCat,value=$data.value,key=$data.key,$escape=$utils.$escape,value_=$data.value_,key_=$data.key_,$out='';$out+='<ul class="accordion">\n    ';
 $each(courseCat,function(value,key){
 $out+='\n    <li>\n      <button class="accordion-control">';
 $out+=$escape(value.name);
-$out+='</button><span>+</span>\n      <ul class="accordion-panel">\n        <li>中国哲学</li>\n        <li class="notone">西方哲学</li>\n      </ul>\n    </li>\n    ';
+$out+='</button><span>+</span>\n      <ul class="accordion-panel">\n        ';
+$each(value.children,function(value_,key_){
+$out+='\n        <li class="notone">';
+$out+=$escape(value_.name);
+$out+='</li>\n        ';
+});
+$out+='\n      </ul>\n    </li>\n    ';
 });
 $out+='\n</ul>\n';
 return new String($out);
