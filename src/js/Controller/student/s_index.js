@@ -11,15 +11,7 @@ require.config({
 //进行入口处理
 require(['jquery', 'swiper', 'tpl', 'cookies'], function($, Swiper, tpl, Cookies) {
   $(function() {
-    var mySwiper = new Swiper('.swiper-container', {
-      autoplay: true, //可选选项，自动滑动
-      parallax: true,
-      speed: 2000,
-      loop: true,
-      pagination: {
-        el: '.swiper-pagination'
-      }
-    });
+    //用户信息
     var userData = {};
     $.ajaxSetup({headers: {
       'Authorization': Cookies.get('Authorization')
@@ -40,6 +32,32 @@ require(['jquery', 'swiper', 'tpl', 'cookies'], function($, Swiper, tpl, Cookies
         console.log('获取失败');
       }
     });
+    //轮播图
+    var swiperList = [];
+    $.ajax({
+      url: 'http://n.hamkd.com/api/student/carousel',
+      type: 'GET',
+      data: '',
+      dataType: 'json',
+      success: function(response) {
+        console.log('swiper:', response);
+        swiperList = response;
+        // $('#s_banner').html(tpl('Swiper', {swiperList: swiperList}));
+        var mySwiper = new Swiper('.swiper-container', {
+          autoplay: true, //可选选项，自动滑动
+          parallax: true,
+          speed: 2000,
+          loop: true,
+          pagination: {
+            el: '.swiper-pagination'
+          }
+        });
+      },
+      error: function() {
+        console.log('获取失败');
+      }
+    });
+
     //推荐课程列表请求 --- 可以封装在js文件中
     var courseList = [];
     $.ajax({

@@ -4,7 +4,7 @@
       <button class="accordion-control">{{value.name}}</button><span>+</span>
       <ul class="accordion-panel">
         {{each value.children as value_ key_}}
-        <li class="notone">{{value_.name}}</li>
+        <li class="notone" name={{value_.id}}>{{value_.name}}</li>
         {{/each}}
       </ul>
     </li>

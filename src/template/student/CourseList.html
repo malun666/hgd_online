@@ -1,8 +1,10 @@
 <ul>
   {{each courseList as value key}}
   <li>
-    <img src={{value.img}} alt="">
-    <p>{{value.title}}</p>
+    <a href="/view/student/s_course_detail.html?id={{value.id}}">
+      <img src={{value.img}} alt="王二蛋">
+    </a>
+    <p>{{value.id + value.title}}</p>
   </li>
   {{/each}}
 </ul>

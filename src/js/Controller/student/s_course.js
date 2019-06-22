@@ -21,6 +21,7 @@ require(['jquery', 'tpl', 'cookies', 'common', 'pagination'], function($, tpl, C
       'Authorization': Cookies.get('Authorization')
     }});
     var id = Cookies.get('userID');
+    var childID;
     $.ajax({
       url: 'http://n.hamkd.com/api/user/' + id,
       type: 'GET',
@@ -66,6 +67,23 @@ require(['jquery', 'tpl', 'cookies', 'common', 'pagination'], function($, tpl, C
           $span.html() === '+' ? $span.html('-') : $span.html('+');
           var catIdString = $(this).text();
           $('.course-nav').html(catIdString);
+        });
+        $('.accordion-panel').on('click', 'li', function(e) {
+          var childText = $(this).text();
+
+          document.querySelector('.left_span').style.opacity = 1;
+          $('.child_text').html(childText);
+          childID = $(this).attr('name');
+          $.ajax({
+            url: 'http://n.hamkd.com/api/student/courses?_limit=20&_order=id&catId=' + childID,
+            type: 'GET',
+            data: '',
+            dataType: 'json'
+          }).done(function(response) {
+            console.log('catId', response);
+            catCourseList = response;
+            $('.content_main').html(tpl('CatCourseList', {catCourseList: catCourseList}));
+          });
         });
       },
       error: function() {
