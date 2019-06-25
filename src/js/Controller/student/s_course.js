@@ -83,6 +83,10 @@ require(['jquery', 'tpl', 'cookies', 'common', 'pagination'], function($, tpl, C
             console.log('catId', response);
             catCourseList = response;
             $('.content_main').html(tpl('CatCourseList', {catCourseList: catCourseList}));
+            // $('#pagination').pagination({
+            //   items: 100,
+            //   itemsOnPage: 20,
+            //   cssStyle: 'light-theme'});
           });
         });
       },
@@ -116,26 +120,23 @@ require(['jquery', 'tpl', 'cookies', 'common', 'pagination'], function($, tpl, C
     //   }
     // });
 
-    var catCourseList = [];
-    $.ajax({
-      url: 'http://n.hamkd.com/api/student/courses?catId=6&_limit=20&_order=id',
-      type: 'GET',
-      data: '',
-      dataType: 'json'
-    }).done(function(response) {
-      console.log('catId', response);
-      catCourseList = response;
-      $('.content_main').html(tpl('CatCourseList', {catCourseList: catCourseList}));
-    });
+    // var catCourseList = [];
+    // $.ajax({
+    //   url: 'http://n.hamkd.com/api/student/courses?catId=6&_limit=20&_order=id',
+    //   type: 'GET',
+    //   data: '',
+    //   dataType: 'json'
+    // }).done(function(response) {
+    //   console.log('catId', response);
+    //   catCourseList = response;
+    //   $('.content_main').html(tpl('CatCourseList', {catCourseList: catCourseList}));
+    // });
 
     $('.pagination').pagination({
       items: 100,
-      itemsOnPage: 10,
-      cssStyle: 'light-theme',
-      // onPageClick: changePage, //当页面被点击时调用的函数
-      // currentPage: cur, //当前页
-      prevText: '上一页',
-      nextText: '下一页'
+      itemsOnPage: 20,
+      cssStyle: 'light-theme'
     });
+    $('.pagination').pagination('getPagesCount');
   });
 });
